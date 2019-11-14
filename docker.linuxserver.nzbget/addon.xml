@@ -28,6 +28,7 @@
 
             1.0.5
             - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
 
             1.0.4
             - Fix timezone bug

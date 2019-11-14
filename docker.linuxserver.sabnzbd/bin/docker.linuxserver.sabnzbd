@@ -54,4 +54,6 @@ docker run --name="$name" \
            -v "$V_incomplete":/incomplete-downloads \
            -p "$P_port":8080 \
            -p "$P_port2":9090 \
+           --network=lsio \
+           --network-alias=sabnzbd \
            "$DOCKERIMAGE":latest

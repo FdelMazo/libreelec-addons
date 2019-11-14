@@ -55,4 +55,6 @@ docker run --name="$name" \
            -p "$P_port":9091 \
            -p "$P_port2":51413 \
            -p "$P_port2":51413/udp \
+           --network=lsio \
+           --network-alias=transmission \
            "$DOCKERIMAGE":latest

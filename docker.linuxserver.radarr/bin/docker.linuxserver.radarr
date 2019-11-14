@@ -53,4 +53,6 @@ docker run --name="$name" \
            -v "$V_movies":/movies \
            -v "$V_downloads":/downloads \
            -p "$P_port":7878 \
+           --network=lsio \
+           --network-alias=radarr \
            "$DOCKERIMAGE":latest

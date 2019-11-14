@@ -53,4 +53,6 @@ docker run --name="$name" \
            -v "$V_tv":/tv \
            -v "$V_downloads":/downloads \
            -p "$P_port":8989 \
+           --network=lsio \
+           --network-alias=sonarr \
            "$DOCKERIMAGE":latest
