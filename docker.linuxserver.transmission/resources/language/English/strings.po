@@ -22,9 +22,13 @@ msgid "Map /watch"
 msgstr ""
 
 msgctxt "#30008"
-msgid "Webui port"
+msgid "Webui"
 msgstr ""
 
 msgctxt "#30009"
+msgid "Webui port"
+msgstr ""
+
+msgctxt "#30010"
 msgid "P2P port"
 msgstr ""

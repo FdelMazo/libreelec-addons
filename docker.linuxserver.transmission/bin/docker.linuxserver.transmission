@@ -30,6 +30,10 @@ if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserve
   echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
+if [ $E_webinterface == "default" ]; then
+    E_webinterface="/usr/share/transmission/web/"
+fi
+
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_downloads" "$V_watch"
@@ -49,6 +53,7 @@ docker run --name="$name" \
            -e PUID="65534" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
+           -e TRANSMISSION_WEB_HOME="$E_webinterface" \
            -v "$V_config":/config \
            -v "$V_downloads":/downloads \
            -v "$V_watch":/watch \
