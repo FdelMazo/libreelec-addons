@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="docker.linuxserver.taisun"
+       name="Taisun (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0"/>
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Taisun in a docker container</summary>
+        <description>
+            Taisun is an application for a Docker enabled device with an emphasis on providing a web based interface for
+            managing a single server. Taisun allows you to:
+
+            Deploy and manage web based virtual desktops.
+            Deploy Taisun specific stacks of applications
+            Browse available images on popular Docker repositories
+            Import a Docker project from any git repository and start developing on your choice of web based IDE or full
+            Linux desktop
+            Spinup a developer container based on popular frameworks and work from a web based IDE
+            Single click remote server access to Taisun and your Docker applications
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.taisun:
+            --------------------------
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
