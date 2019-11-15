@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="docker.linuxserver.lidarr"
+       name="Lidarr (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0"/>
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Lidarr in a docker container</summary>
+        <description>
+            Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for
+            new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to
+            automatically upgrade the quality of files already downloaded when a better quality format becomes
+            available.
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.lidarr:
+            --------------------------
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
