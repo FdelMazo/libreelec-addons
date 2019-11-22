@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="docker.linuxserver.sonarr"
-       name="Sonarr (LinuxServer.io)"
-       version="1.0.5"
+<addon id="docker.linuxserver.deluge"
+       name="Deluge (LinuxServer.io)"
+       version="1.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -13,39 +13,27 @@
         <provides></provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Sonarr in a docker container</summary>
+        <summary>Deluge in a docker container</summary>
         <description>
-            Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
+            Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
+
+              - Full Encryption
+              - WebUI
+              - Plugin System
+              - Much more...
 
             This is a docker container brought to you by the LinuxServer.io team.
             Please visit https://linuxserver.io for more information.
         </description>
-        <disclaimer>
-        </disclaimer>
         <news>
-            docker.linuxserver.sonarr:
-            --------------------------
-
-            1.0.5
-            - Use docker image updater for image updates (faster startup on boot)
-            - Use the custom lsio docker network for intercontainer communication via containername as hostname
-            - Switch to multi-arch builds
-
-            1.0.4
-            - Fix timezone bug
-
-            1.0.3
-            - Added aarch64 support
-
-            1.0.2
-            - Run as user nobody
-
-            1.0.1
-            - Unified addon for x86_64 and arm
+            docker.linuxserver.deluge:
+            --------------------------------
 
             1.0.0
-            -Initial release
+            - Initial release
         </news>
+        <disclaimer>
+        </disclaimer>
         <platform>all</platform>
         <website>http://linuxserver.io/</website>
         <assets>

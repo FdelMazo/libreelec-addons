@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="docker.linuxserver.sonarr"
-       name="Sonarr (LinuxServer.io)"
-       version="1.0.5"
+<addon id="docker.linuxserver.lidarr"
+       name="Lidarr (LinuxServer.io)"
+       version="1.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="service.system.docker" version="0.0.0"/>
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
     <extension point="xbmc.service" library="default.py">
         <provides></provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Sonarr in a docker container</summary>
+        <summary>Lidarr in a docker container</summary>
         <description>
-            Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
+            Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for
+            new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to
+            automatically upgrade the quality of files already downloaded when a better quality format becomes
+            available.
 
             This is a docker container brought to you by the LinuxServer.io team.
             Please visit https://linuxserver.io for more information.
@@ -23,25 +26,8 @@
         <disclaimer>
         </disclaimer>
         <news>
-            docker.linuxserver.sonarr:
+            docker.linuxserver.lidarr:
             --------------------------
-
-            1.0.5
-            - Use docker image updater for image updates (faster startup on boot)
-            - Use the custom lsio docker network for intercontainer communication via containername as hostname
-            - Switch to multi-arch builds
-
-            1.0.4
-            - Fix timezone bug
-
-            1.0.3
-            - Added aarch64 support
-
-            1.0.2
-            - Run as user nobody
-
-            1.0.1
-            - Unified addon for x86_64 and arm
 
             1.0.0
             -Initial release

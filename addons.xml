@@ -1,313 +1,614 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="docker.linuxserver.radarr"
-       name="Radarr (LinuxServer.io)"
-       version="1.0.0"
+<addon id="docker.linuxserver.transmission"
+       name="Transmission (LinuxServer.io)"
+       version="1.0.3"
        provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Radarr in a docker container</summary>
-    <description>
-A fork of Sonarr to work with movies à la Couchpotato.
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Transmission in a docker container</summary>
+        <description>
+            Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.
 
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.radarr:
---------------------------
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <news>
+            docker.linuxserver.transmission:
+            --------------------------------
 
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
+            1.0.3
+            - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
+            - Added web interface settings
+            - Switch to multi-arch builds
 
-<addon
-  id="repository.linuxserver.docker.ext"
-  name="LinuxServer.io's Extended Docker Add-ons"
-  version="1.0.0"
-  provider-name="linuxserver.io">
-  <requires>
-    <import addon="xbmc.addon"
-            version="16.0.0"/>
-  </requires>
-  <extension point="xbmc.addon.repository"
-             name="LinuxServer.io's Extended Docker Add-on Repository">
-    <info compressed="true">https://raw.githubusercontent.com/linuxserver/libreelec-addons/master/addons.xml</info>
-    <checksum>https://raw.githubusercontent.com/linuxserver/libreelec-addons/master/addons.xml.md5</checksum>
-    <datadir zip="true">https://raw.githubusercontent.com/linuxserver/libreelec-addons/master/download</datadir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Install add-ons from LinuxServer.io's docker repository</summary>
-    <description>
-Download and install docker container add-ons from the LinuxServer.io repository. This is the extended repo.
+            1.0.2
+            - Fix timezone bug
 
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer> </disclaimer>
-    <platform>all</platform>
-  </extension>
+            1.0.1
+            - Added aarch64 support
+
+            1.0.0
+            - Initial release
+        </news>
+        <disclaimer>
+        </disclaimer>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="docker.linuxserver.couchpotato"
        name="CouchPotato (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>CouchPotato in a docker container</summary>
-    <description>
-CouchPotato is an automatic NZB and torrent downloader. You can keep a movies I want list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>CouchPotato in a docker container</summary>
+        <description>
+            CouchPotato is an automatic NZB and torrent downloader. You can keep a movies I want list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.
 
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.couchpotato:
--------------------------------
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.couchpotato:
+            -------------------------------
 
-1.0.4
-- Fix timezone bug
+            1.0.5
+            - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
+            - Switch to multi-arch builds
 
-1.0.3
-- Added aarch64 support
+            1.0.4
+            - Fix timezone bug
 
-1.0.2
-- Run as user nobody
+            1.0.3
+            - Added aarch64 support
 
-1.0.1
-- Unified addon for x86_64 and arm
+            1.0.2
+            - Run as user nobody
 
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
+            1.0.1
+            - Unified addon for x86_64 and arm
+
+            1.0.0
+            - Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="docker.linuxserver.radarr"
+       name="Radarr (LinuxServer.io)"
+       version="1.0.1"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Radarr in a docker container</summary>
+        <description>
+            A fork of Sonarr to work with movies à la Couchpotato.
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.radarr:
+            --------------------------
+
+            1.0.1
+            - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
+            - Switch to multi-arch builds
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="docker.linuxserver.nzbget"
        name="Nzbget (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Nzbget in a docker container</summary>
-    <description>
-NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Nzbget in a docker container</summary>
+        <description>
+            NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
 
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
 
-Default user:pass are nzbget:tegbzn6789 (Change ASAP)
-    </description>
-    <news>
-docker.linuxserver.nzbget:
---------------------------
+            Default user:pass are nzbget:tegbzn6789 (Change ASAP)
+        </description>
+        <news>
+            docker.linuxserver.nzbget:
+            --------------------------
 
-1.0.4
-- Fix timezone bug
+            1.0.5
+            - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
+            - Switch to multi-arch builds
 
-1.0.3
-- Added aarch support
+            1.0.4
+            - Fix timezone bug
 
-1.0.2
-- Change user to nobody
+            1.0.3
+            - Added aarch support
 
-1.0.1
-- Unified addon for x86_64 and arm
+            1.0.2
+            - Change user to nobody
 
-1.0.0
-- Initial release
-    </news>
-    <disclaimer>
-    </disclaimer>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
+            1.0.1
+            - Unified addon for x86_64 and arm
+
+            1.0.0
+            - Initial release
+        </news>
+        <disclaimer>
+        </disclaimer>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
-<addon id="docker.linuxserver.sabnzbd"
-       name="SABnzbd (LinuxServer.io)"
-       version="1.0.4"
+<addon id="docker.linuxserver.medusa"
+       name="Medusa (LinuxServer.io)"
+       version="1.0.0"
        provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>SABnzbd in a docker container</summary>
-    <description>
-SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Medusa in a docker container</summary>
+        <description>
+            Medusa is an automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.
 
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.sabnzbd:
----------------------------
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.medusa:
+            -------------------------------
 
-1.0.4
-- Fix timezone bug
+            1.0.0
+            - Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
 
-1.0.3
-- Added aarch64 support
+<addon
+        id="repository.linuxserver.docker.ext"
+        name="LinuxServer.io's Extended Docker Add-ons"
+        version="1.0.1"
+        provider-name="linuxserver.io, queeup">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository"
+               name="LinuxServer.io's Extended Docker Add-on Repository">
+        <info compressed="true">https://raw.githubusercontent.com/queeup/libreelec-addons/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/queeup/libreelec-addons/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/queeup/libreelec-addons/master/download</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Install add-ons from LinuxServer.io's docker repository</summary>
+        <description>
+            Download and install docker container add-ons from the LinuxServer.io repository. This is the extended repo.
 
-1.0.2
-- Run as user nobody
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            repository.linuxserver.docker.ext:
+            ----------------------------------
 
-1.0.1
-- Unified addon for x86_64 and arm
+            1.0.1
+            - links to queeup fork
+        </news>
+        <platform>all</platform>
+    </extension>
+</addon>
 
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
+<addon id="docker.linuxserver.lidarr"
+       name="Lidarr (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0"/>
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Lidarr in a docker container</summary>
+        <description>
+            Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for
+            new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to
+            automatically upgrade the quality of files already downloaded when a better quality format becomes
+            available.
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.lidarr:
+            --------------------------
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="docker.linuxserver.sickgear"
+       name="SickGear (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>SickGear in a docker container</summary>
+        <description>
+            SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more..
+
+            For more information on SickGear visit their website and check it out: https://github.com/SickGear/SickGear
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.sickgear:
+            -------------------------------
+
+            1.0.0
+            - Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="docker.linuxserver.grocy"
+       name="Grocy (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Grocy in a docker container</summary>
+        <description>
+            Grocy is an ERP system for your kitchen! Cut down on food waste, and manage your chores with this brilliant utulity.
+
+            Keep track of your purchaes, how much food you are wasting, what chores need doing and what batteries need charging with this proudly Open Source tool
+
+            For more information on grocy visit their website and check it out: https://grocy.info
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.grocy:
+            --------------------------
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="docker.linuxserver.deluge"
+       name="Deluge (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Deluge in a docker container</summary>
+        <description>
+            Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
+
+              - Full Encryption
+              - WebUI
+              - Plugin System
+              - Much more...
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <news>
+            docker.linuxserver.deluge:
+            --------------------------------
+
+            1.0.0
+            - Initial release
+        </news>
+        <disclaimer>
+        </disclaimer>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="docker.linuxserver.sonarr"
        name="Sonarr (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Sonarr in a docker container</summary>
-    <description>
-Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Sonarr in a docker container</summary>
+        <description>
+            Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
 
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.sonarr:
---------------------------
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.sonarr:
+            --------------------------
 
-1.0.4
-- Fix timezone bug
+            1.0.5
+            - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
+            - Switch to multi-arch builds
 
-1.0.3
-- Added aarch64 support
+            1.0.4
+            - Fix timezone bug
 
-1.0.2
-- Run as user nobody
+            1.0.3
+            - Added aarch64 support
 
-1.0.1
-- Unified addon for x86_64 and arm
+            1.0.2
+            - Run as user nobody
 
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
+            1.0.1
+            - Unified addon for x86_64 and arm
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
-<addon id="docker.linuxserver.transmission"
-       name="Transmission (LinuxServer.io)"
-       version="1.0.2"
+<addon id="docker.linuxserver.sabnzbd"
+       name="SABnzbd (LinuxServer.io)"
+       version="1.0.5"
        provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Transmission in a docker container</summary>
-    <description>
-Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0" />
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>SABnzbd in a docker container</summary>
+        <description>
+            SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
 
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <news>
-docker.linuxserver.transmission:
---------------------------------
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.sabnzbd:
+            ---------------------------
 
-1.0.2
-- Fix timezone bug
+            1.0.5
+            - Use docker image updater for image updates (faster startup on boot)
+            - Use the custom lsio docker network for intercontainer communication via containername as hostname
+            - Switch to multi-arch builds
 
-1.0.1
-- Added aarch64 support
+            1.0.4
+            - Fix timezone bug
 
-1.0.0
-- Initial release
-    </news>
-    <disclaimer>
-    </disclaimer>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
+            1.0.3
+            - Added aarch64 support
+
+            1.0.2
+            - Run as user nobody
+
+            1.0.1
+            - Unified addon for x86_64 and arm
+
+            1.0.0
+            - Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="docker.linuxserver.taisun"
+       name="Taisun (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+    <requires>
+        <import addon="os.libreelec.tv" version="7.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="service.system.docker" version="0.0.0"/>
+        <import addon="docker.linuxserver.updater" version="0.0.0"/>
+    </requires>
+    <extension point="xbmc.service" library="default.py">
+        <provides></provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Taisun in a docker container</summary>
+        <description>
+            Taisun is an application for a Docker enabled device with an emphasis on providing a web based interface for
+            managing a single server. Taisun allows you to:
+
+            Deploy and manage web based virtual desktops.
+            Deploy Taisun specific stacks of applications
+            Browse available images on popular Docker repositories
+            Import a Docker project from any git repository and start developing on your choice of web based IDE or full
+            Linux desktop
+            Spinup a developer container based on popular frameworks and work from a web based IDE
+            Single click remote server access to Taisun and your Docker applications
+
+            This is a docker container brought to you by the LinuxServer.io team.
+            Please visit https://linuxserver.io for more information.
+        </description>
+        <disclaimer>
+        </disclaimer>
+        <news>
+            docker.linuxserver.taisun:
+            --------------------------
+
+            1.0.0
+            -Initial release
+        </news>
+        <platform>all</platform>
+        <website>http://linuxserver.io/</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 </addons>
