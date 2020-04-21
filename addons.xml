@@ -6,7 +6,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -57,7 +56,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -113,7 +111,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -157,7 +154,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -215,7 +211,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -288,7 +283,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0"/>
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -330,7 +324,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -371,7 +364,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -414,7 +406,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -458,7 +449,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -514,7 +504,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0" />
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
@@ -570,7 +559,6 @@
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="service.system.docker" version="0.0.0"/>
         <import addon="docker.linuxserver.updater" version="0.0.0"/>
     </requires>
