@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.medusa
+docker stop medusa
 
 # remove image from cron updater list
 sed -i '/medusa/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

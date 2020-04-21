@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.sonarr
+docker stop sonarr
 
 # remove image from cron updater list
 sed -i '/sonarr/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

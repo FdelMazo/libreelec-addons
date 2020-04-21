@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.couchpotato
+docker stop couchpotato
 
 # remove image from cron updater list
 sed -i '/couchpotato/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

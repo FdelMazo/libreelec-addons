@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.sickgear
+docker stop sickgear
 
 # remove image from cron updater list
 sed -i '/sickgear/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
