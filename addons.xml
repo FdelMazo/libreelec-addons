@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.transmission"
        name="Transmission (LinuxServer.io)"
-       version="1.0.3"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -23,6 +23,10 @@
         <news>
             docker.linuxserver.transmission:
             --------------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.3
             - Use docker image updater for image updates (faster startup on boot)
@@ -52,7 +56,7 @@
 
 <addon id="docker.linuxserver.couchpotato"
        name="CouchPotato (LinuxServer.io)"
-       version="1.0.5"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -75,6 +79,10 @@
         <news>
             docker.linuxserver.couchpotato:
             -------------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.5
             - Use docker image updater for image updates (faster startup on boot)
@@ -107,7 +115,7 @@
 
 <addon id="docker.linuxserver.radarr"
        name="Radarr (LinuxServer.io)"
-       version="1.0.1"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -131,6 +139,10 @@
             docker.linuxserver.radarr:
             --------------------------
 
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
+
             1.0.1
             - Use docker image updater for image updates (faster startup on boot)
             - Use the custom lsio docker network for intercontainer communication via containername as hostname
@@ -150,7 +162,7 @@
 
 <addon id="docker.linuxserver.nzbget"
        name="Nzbget (LinuxServer.io)"
-       version="1.0.5"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -173,6 +185,10 @@
         <news>
             docker.linuxserver.nzbget:
             --------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.5
             - Use docker image updater for image updates (faster startup on boot)
@@ -207,7 +223,7 @@
 
 <addon id="docker.linuxserver.medusa"
        name="Medusa (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -230,6 +246,10 @@
         <news>
             docker.linuxserver.medusa:
             -------------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.0
             - Initial release
@@ -279,7 +299,7 @@
 
 <addon id="docker.linuxserver.lidarr"
        name="Lidarr (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -306,6 +326,10 @@
             docker.linuxserver.lidarr:
             --------------------------
 
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
+
             1.0.0
             -Initial release
         </news>
@@ -320,7 +344,7 @@
 
 <addon id="docker.linuxserver.sickgear"
        name="SickGear (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -346,6 +370,10 @@
             docker.linuxserver.sickgear:
             -------------------------------
 
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
+
             1.0.0
             - Initial release
         </news>
@@ -360,7 +388,7 @@
 
 <addon id="docker.linuxserver.grocy"
        name="Grocy (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -388,6 +416,10 @@
             docker.linuxserver.grocy:
             --------------------------
 
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
+
             1.0.0
             -Initial release
         </news>
@@ -402,7 +434,7 @@
 
 <addon id="docker.linuxserver.deluge"
        name="Deluge (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -429,6 +461,10 @@
             docker.linuxserver.deluge:
             --------------------------------
 
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
+
             1.0.0
             - Initial release
         </news>
@@ -445,7 +481,7 @@
 
 <addon id="docker.linuxserver.sonarr"
        name="Sonarr (LinuxServer.io)"
-       version="1.0.5"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -468,6 +504,10 @@
         <news>
             docker.linuxserver.sonarr:
             --------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.5
             - Use docker image updater for image updates (faster startup on boot)
@@ -500,7 +540,7 @@
 
 <addon id="docker.linuxserver.sabnzbd"
        name="SABnzbd (LinuxServer.io)"
-       version="1.0.5"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -523,6 +563,10 @@
         <news>
             docker.linuxserver.sabnzbd:
             ---------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.5
             - Use docker image updater for image updates (faster startup on boot)
@@ -555,7 +599,7 @@
 
 <addon id="docker.linuxserver.taisun"
        name="Taisun (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -587,6 +631,10 @@
         <news>
             docker.linuxserver.taisun:
             --------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.0
             -Initial release

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.grocy"
        name="Grocy (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="os.libreelec.tv" version="7.0"/>
@@ -28,6 +28,10 @@
         <news>
             docker.linuxserver.grocy:
             --------------------------
+
+            2.0.0
+            - kodi matrix compatibility
+            - use docker container name instead kodi add-on id
 
             1.0.0
             -Initial release
