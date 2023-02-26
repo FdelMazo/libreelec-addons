@@ -2,16 +2,18 @@
 <addon
         id="repository.linuxserver.docker.ext"
         name="LinuxServer.io's Extended Docker Add-ons"
-        version="1.0.1"
+        version="2.0.0"
         provider-name="linuxserver.io, queeup">
     <requires>
         <import addon="xbmc.addon" version="16.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository"
                name="LinuxServer.io's Extended Docker Add-on Repository">
+    <dir>
         <info compressed="true">https://raw.githubusercontent.com/queeup/libreelec-addons/master/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/queeup/libreelec-addons/master/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/queeup/libreelec-addons/master/download</datadir>
+    </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Install add-ons from LinuxServer.io's docker repository</summary>
@@ -25,6 +27,9 @@
         <news>
             repository.linuxserver.docker.ext:
             ----------------------------------
+
+            2.0.0
+            - Use Kodi Nexus `dir` structure
 
             1.0.1
             - links to queeup fork
