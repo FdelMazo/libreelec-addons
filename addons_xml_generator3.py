@@ -62,10 +62,10 @@ class Generator:
         self._generate_md5_file()
         # notify user
         print("Finished updating addons xml and md5 files\n")
- 
+
     def _generate_addons_file(self):
         # addon list
-        addons = os.listdir(".")
+        addons = sorted(os.listdir("."))
         # final addons text
         addons_xml = u("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<addons>\n")
         # loop thru and add each addons addon.xml file
