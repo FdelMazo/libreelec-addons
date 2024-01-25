@@ -5,7 +5,7 @@
         <setting label="30005" type="folder" id="V_config" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.transmission/config" option="writeable"/>
         <setting label="30006" type="folder" id="V_downloads" default="/storage/downloads/downloadclient-downloads" option="writeable"/>
         <setting label="30007" type="folder" id="V_watch" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.transmission/watch" option="writeable"/>
-        <setting label="30008" type="labelenum" id="E_webinterface" default="default" values="default|/transmission-web-control/|/kettu/|/combustion-release/" />
+        <setting label="30008" type="folder" id="V_webui" default="" option="writeable"/>
         <setting label="30009" type="number" id="P_port" default="9091"/>
         <setting label="30010" type="number" id="P_port2" default="51413"/>
     </category>

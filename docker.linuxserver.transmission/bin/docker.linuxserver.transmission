@@ -24,8 +24,10 @@ if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserve
   echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
-if [ $E_webinterface == "default" ]; then
-    E_webinterface="/usr/share/transmission/web/"
+if [ -z $V_webui ]; then
+    E_webinterface="/usr/share/transmission/public_html"
+else
+    E_webinterface="/webui"
 fi
 
 docker rm "$name" 2>/dev/null
@@ -49,6 +51,7 @@ docker run --name="$name" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
            -e TRANSMISSION_WEB_HOME="$E_webinterface" \
+           ${V_webui:+-v "$V_webui":/webui} \
            -v "$V_config":/config \
            -v "$V_downloads":/downloads \
            -v "$V_watch":/watch \

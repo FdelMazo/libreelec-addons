@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.transmission"
        name="Transmission (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
     <requires>
         <import addon="service.system.docker" version="0.0.0" />
@@ -21,6 +21,9 @@
         <news>
             docker.linuxserver.transmission:
             --------------------------------
+            2.0.2
+            - Allow setting up a webui from a local directory
+
 
             2.0.1
             - Kodi Nexus compatibility: remove `os.libreelec.tv` dependency
